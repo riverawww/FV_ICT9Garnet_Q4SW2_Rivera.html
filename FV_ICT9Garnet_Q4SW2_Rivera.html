@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, inital-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<title>Time Converter! ^_^</title>
+
+		<style type="text/css">
+
+		h1, p{
+			font-family: Playfair
+		}
+
+		body{
+		background-image: url(https://i.pinimg.com/originals/74/19/07/74190702dacafb832d8791ddbdbbaf7f.gif);
+		background-size: cover;
+		/*bg img reference: https://www.pinterest.ph/pin/203928689368179856/*/
+		/*cat sleeping reference: https://giphy.com/stickers/mewo-omori-EFWboceZxwfnSFClXI*/
+		}
+	</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+</head>
+<body>
+<br>
+<br>
+<br>
+<br>
+<h1 align="center">Time Converter!!</h1>
+<center><img src="https://media0.giphy.com/media/EFWboceZxwfnSFClXI/200w.webp?cid=ecf05e47lg2eh1l67fwul6s88c2vq3jswzd9x7pffb9vzbuq&ep=v1_stickers_search&rid=200w.webp&ct=s"></center>
+<br>
+<p align="center">
+How To Use;
+<br>
+1. Add the amount of time you want to convert into, under the different categories such as seconds, minutes, etc.
+<br>
+2. Press the buttons you want it to convert into! (To seconds, minutes, days, etc.)
+</p>
+
+<div class="container" style="background-color: #375866">
+
+	<br>
+	<br>
+
+	<h1 class="text-light">Seconds</h1>
+	<p><input type="text" name="Seconds" id="seconds"></p>
+
+	<input type="button" class="btn btn-light" onclick="SecToMin()" value="minutes">
+	<input type="button" class="btn btn-light" onclick="SecToHr()" value="hours">
+	<input type="button" class="btn btn-light" onclick="SecToDay()" value="days">
+
+<hr>
+
+	<h1 class="text-light">Minutes</h1>
+	<p><input type="text" name="Minutes" id="minutes"></p>
+	<input type="button" class="btn btn-light" onclick="MinToSec()" value="seconds">
+	<input type="button" class="btn btn-light" onclick="MinToHr()" value="hours">
+	<input type="button" class="btn btn-light" onclick="MinToDay()" value="days">
+
+<hr>
+
+	<h1 class="text-light">Hours</h1>
+	<p><input type="text" name="Hours" id="hours"></p>
+	<input type="button" class="btn btn-light" onclick="HrToSec()" value="seconds">
+	<input type="button" class="btn btn-light" onclick="HrToMin()" value="minutes">
+	<input type="button" class="btn btn-light" onclick="HrToDay()" value="days">
+
+<hr>
+
+	<h1 class="text-light">Days</h1>
+	<p><input type="text" name="Days" id="days"></p>
+	<input type="button" class="btn btn-light" onclick="DayToSec()" value="seconds">
+	<input type="button" class="btn btn-light" onclick="DayToMin()" value="minutes">
+	<input type="button" class="btn btn-light" onclick="DayToHr()" value="hours">
+
+	<br>
+	<br>
+
+	<h1 style="color: #375866">.</h1>
+
+</div>
+
+<script type="text/javascript">
+/*Seconds, 1st table*/
+let x;
+let y;
+
+	function SecToMin(){
+		let x = parseInt(document.getElementById("seconds").value);
+		let y = 60;
+		alert(x / y);
+	}
+
+	function SecToHr(){
+		let x = parseInt(document.getElementById("seconds").value);
+		let y = 3600;
+		alert(x / y);
+	}
+
+	function SecToDay(){
+		let x = parseInt(document.getElementById("seconds").value);
+		let y = 86400;
+		alert(x / y);
+	}
+
+/*Minutes, 2nd table*/
+function MinToSec(){
+		let x = parseInt(document.getElementById("minutes").value);
+		let y = 60;
+		alert(x * y);
+	}
+
+	function MinToHr(){
+		let x = parseInt(document.getElementById("minutes").value);
+		let y = 60;
+		alert(x / y);
+	}
+
+	function MinToDay(){
+		let x = parseInt(document.getElementById("minutes").value);
+		let y = 1440;
+		alert(x / y);
+	}
+
+
+
+/*Hours, 3rd table*/
+
+	function HrToSec(){
+		let x = parseInt(document.getElementById("hours").value);
+		let y = 3600;
+		alert(x * y);
+	}
+
+	function HrToMin(){
+		let x = parseInt(document.getElementById("hours").value);
+		let y = 60;
+		alert(x * y);
+	}
+
+	function HrToDay(){
+		let x = parseInt(document.getElementById("hours").value);
+		let y = 24;
+		alert(x / y);
+	}
+
+/*Days, 4th table*/
+	function DayToSec(){
+		let x = parseInt(document.getElementById("days").value);
+		let y = 86400;
+		alert(x * y);
+	}
+
+	function DayToMin(){
+		let x = parseInt(document.getElementById("days").value);
+		let y = 1440;
+		alert(x * y);
+	}
+
+	function DayToHr(){
+		let x = parseInt(document.getElementById("days").value);
+		let y = 24;
+		alert(x * y);
+	}
+</script>
+</body>
+</html>
